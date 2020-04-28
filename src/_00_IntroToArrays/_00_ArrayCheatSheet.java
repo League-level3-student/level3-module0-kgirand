@@ -26,19 +26,33 @@ public class _00_ArrayCheatSheet {
 		//8. use a for loop to make every value of the integer array a random number
 		Random randy = new Random();
 		for(int i = 0; i < ints.length; i++) {
-			ints[i] = randy.nextInt();
+			ints[i] = randy.nextInt(100);
 		}
 		//9. without printing the entire array, print only the smallest number on the array
+		int smallest = Integer.MAX_VALUE;
 		for(int i = 0; i< ints.length; i++) {
-			if(ints[i]>ints[i-1]) {
-				
-			}
+				if(ints[i]<smallest) {
+					smallest = ints[i];
+				}
 		}
+		String s = Integer.toString(smallest);
+		System.out.println("smallest:" + s);
 		//10 print the entire array to see if step 8 was correct
-
+		for(int i = 0; i<ints.length; i++) {
+			System.out.println(ints[i]);
+		}
 		//11. print the largest number in the array.
-		
+		int biggest = Integer.MIN_VALUE;
+		for(int i = 0; i<ints.length; i++) {
+			for(int j = i+1; j < ints.length; j++) {
+				if(ints[i]>biggest) {
+					biggest = ints[i];
+				}
+			}	
+		}
+		String ss = Integer.toString(biggest);
+		System.out.println("biggest:" + ss);
 		//12. print only the last element in the array
-		
+		System.out.println(ints[49]);
 	}
 }
