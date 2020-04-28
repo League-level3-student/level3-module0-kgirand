@@ -5,7 +5,7 @@ import java.util.Random;
 public class _00_ArrayCheatSheet {
 	public static void main(String[] args) {
 		//1. make an array of 5 Strings
-		String strings[] = new String[4];
+		String strings[] = new String[5];
 		//2. print the third element in the array
 		System.out.println(strings[2]);
 		//3. set the third element to a different value
@@ -29,7 +29,11 @@ public class _00_ArrayCheatSheet {
 			ints[i] = randy.nextInt();
 		}
 		//9. without printing the entire array, print only the smallest number on the array
-
+		for(int i = 0; i< ints.length; i++) {
+			if(ints[i]>ints[i-1]) {
+				
+			}
+		}
 		//10 print the entire array to see if step 8 was correct
 
 		//11. print the largest number in the array.
