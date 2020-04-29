@@ -23,6 +23,7 @@ public class _01_RobotRace {
 			robots[i].setX(i*150+100);
 			robots[i].setY(480);
 		}
+	
 		//5. use another for loop to iterate through the array and make each robot move 
 	    //   a random amount less than 50.
 		Random randy = new Random();
@@ -32,6 +33,8 @@ public class _01_RobotRace {
 				robots[i].move(randy.nextInt(50));
 				if(robots[i].getY()<=0) {
 					JOptionPane.showMessageDialog(null, "Robot #" + i + " won");
+					j = 100;
+					break;
 				}
 			}
 		}
@@ -43,5 +46,5 @@ public class _01_RobotRace {
     	
 	    //9. make the robots race around a circular track.
 
-	}
+}
 }
